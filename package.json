@@ -1,0 +1,12 @@
+{
+	"name":"blink",
+	"version":"0.0.1",
+	"description":"nodejs raspberry demo app",
+	"author":"Ángel C. Lázaro <angelcristoballazarorios@gmail.com>",
+	"scripts":{
+		"start":"node blink.js"
+	},
+	"dependencies":{
+		"onoff":"1.1.0"
+	}
+}
