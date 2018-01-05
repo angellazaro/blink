@@ -1,6 +1,6 @@
 var Gpio = require('onoff').Gpio;
 var LED = new Gpio(4, 'out');
-var blinkInterval = setInterval(blinkLED, 1000);
+var blinkInterval = setInterval(blinkLED, 5000);
 
 function blinkLED(){
 	if(LED.readSync() === 0){
