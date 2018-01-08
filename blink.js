@@ -1,3 +1,5 @@
+console.log("Hola");
+/*
 var Gpio = require('onoff').Gpio;
 var LED = new Gpio(4, 'out');
 var blinkInterval = setInterval(blinkLED, 5000);
@@ -9,3 +11,4 @@ function blinkLED(){
 		LED.writeSync(0);
 	}
 }	
+*/
