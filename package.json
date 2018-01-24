@@ -1,0 +1,13 @@
+{
+	"name": "blink",
+	"version": "0.0.1",
+	"description": "Node.js app iot",
+	"author": "Angel C. Lazaro <angelcristoballazarorios@gmail.com>",
+	"main": "blink.js",
+	"scripts": {
+		"start": "node blink.js"
+	},
+	"dependencies": {
+		"onoff": "^1.1.0"
+	}
+}
