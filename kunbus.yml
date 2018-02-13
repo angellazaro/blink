@@ -1,0 +1,20 @@
+---
+- hosts: plc
+  user: root
+  vars:
+    version_code: "{{ version }}"
+  tasks:
+    - name: Se listan los contenedores
+      command: "docker ps -aq"
+      register: command_result
+    - debug: var=command_result.stdout_lines
+    - name: Se paran todos los contenedores y procesos
+      command: "docker stop {{ item }}"
+      with_items:
+        - "{{ command_result.stdout_lines }}"
+    - name: Se eliminan todos los contenedores
+      command: "docker rm -f {{ item }}"
+      with_items:
+        - "{{ command_result.stdout_lines }}"
+    - name: Run docker container.
+      command: "docker run --privileged -d angellazaro/blink:{{ version_code }}"
