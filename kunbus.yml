@@ -1,6 +1,5 @@
----
-- hosts: plc
-  user: root
+- name: PLC Blink Sample
+  hosts: all
   vars:
     version_code: "{{ version }}"
   tasks:
